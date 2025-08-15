@@ -1,5 +1,7 @@
 import { correctHTML } from './correct';
 import { wrongHTML } from './wrong';
+import { part1 } from './part1';
+import { part2 } from './part2';
 
 addStylesheet('./src/correct.css', 'correct');
 
@@ -27,7 +29,7 @@ correctLink.addEventListener('click', () => {
   app.replaceChild(correctHTML, wrongHTML);
 
   // Uncomment this function invocation below
-  // part1();
+   part1();
 });
 
 wrongLink.addEventListener('click', () => {
@@ -36,7 +38,7 @@ wrongLink.addEventListener('click', () => {
   app.replaceChild(wrongHTML, correctHTML);
 
   // Uncomment this function invocation below
-  // part2();
+   part2();
 });
 
 // ######### Hoisted functions below ##########
