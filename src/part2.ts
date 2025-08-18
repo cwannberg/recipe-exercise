@@ -49,7 +49,6 @@ wrongBackgroundEl.style.backgroundColor = correctBackgroundColor;
 
 //9.    The ingredients are divided in to two parts, one for the bottom and one for the paste. 
 //      In the list of the ingredients to the bottom, there is a text instead of two list items. Remove the text and add those two list items.
-
 const listItems = correctHTML.querySelector<HTMLUListElement>(".ingredients-list-bottom")!.children;
 const wrongBottom = wrongHTML.querySelector<HTMLUListElement>(".ingredients-list-bottom");
 
@@ -59,7 +58,6 @@ Array.from(listItems).forEach(li => {
 });
 
 //10.    The third ingredient in the list of ingredients to the paste is wrong. Change that specific ingredient to the correct one.
-
 const ingredients = correctHTML.querySelector(".ingredients-list-paste")!;
 const thirdIngredient = ingredients?.children[2] as HTMLElement;
 
@@ -73,9 +71,11 @@ const missingIngredient = ingredients?.children[4].cloneNode(true);
 wrongList.appendChild(missingIngredient);
 
 //12.    The text "Instructions" to the left, beneath the image, has some shadow styling applied to it. Remove that styling.
-
-const h3 = wrongHTML.querySelector<HTMLElement>("instructions-container.h3")!;
+const h3 = wrongHTML.querySelector<HTMLElement>(".instructions")!;
 h3?.classList.remove("shadow");
 
 //13.    Two list elements of the list of instructions are incorrect. Find them and change them to the correct ones.
+const instructions = Array.from(wrongHTML.querySelectorAll(".instructions-list li")!);
+    instructions[8].textContent = "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
+    instructions[8].textContent = "Ställ in i frysen över natten.";
 }

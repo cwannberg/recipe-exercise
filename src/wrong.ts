@@ -35,7 +35,7 @@ wrongHTML.innerHTML = /*html*/ `
       </ul>
     </article>
     <article class="instructions-container">
-      <h3 class="instructions shadow">Idun är bäst</h3>
+      <h3 class="instructions shadow">Instruktioner</h3>
       <ol class="instructions-list">
         <li>
           Smula sönder 10 stycken digistivetex och blanda sen med smöret. Bred ut det i botten
